@@ -28,12 +28,22 @@ print(result)
 
 """
 
-def min_max_number(List):
-  List.sort()
-  return f'{List[-1]} is the maximum number and {List[0]} is the minimum number.'
+def max_number(List):
+  temp_max = List[0]
+  for i in  range(len(List)-1):
+    if temp_max < List[i]:
+      temp_max=List[i]
+  return temp_max
+
+def min_number(List):
+  temp_min = List[0]
+  for i in  range(len(List)-1):
+    if temp_min > List[i]:
+      temp_min=List[i]
+  return temp_min
 
 List = [19, 33, 100, 50, 105, 23]
-result = min_max_number(List)
+result = min_number(List)
 print(result)
 
 """3. Table of any number
@@ -112,3 +122,35 @@ area_of_circle(5)
 
 """8. Convert Celsius to Fahrenheit and vice versa"""
 
+def celsius(f):
+  return ((f-32)*5)/9
+
+def farenhite(c):
+  return ((9*c)/5)+32
+
+result = farenhite(12)
+print(result)
+
+"""9. Sum of the first n positive integers
+
+
+
+
+
+"""
+
+def sum_of_integers(n):
+  return (n*(n+1))/2
+
+result = sum_of_integers(6)
+print(result)
+
+"""10. Linear Search"""
+
+def linear_search(list,k):
+  for i in range(len(list)):
+    if list[i] == k:
+      return i
+List = [1,2,3,4,5]
+result = linear_search(List,5)
+print(result)
