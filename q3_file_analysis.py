@@ -33,3 +33,21 @@ def search_word(name,word):
     
 
 search_word(name_of_file,word)
+
+
+# Test cases for analyze_file()
+# print(analyze_file("sample.txt"))  # Assuming sample.txt is present
+# Expected Output: {"characters": 68, "words": 12, "lines": 3}
+
+# print(analyze_file("nonexistent_file.txt"))  # Test case for nonexistent file
+# Expected Output: {"characters": 0, "words": 0, "lines": 0}
+
+# Test cases for search_word()
+# print(search_word("sample.txt", "Lorem"))  # Assuming sample.txt is present
+# Expected Output: 1 (Assuming "Lorem" occurs once in sample.txt)
+
+# print(search_word("sample.txt", "nonexistentword"))  # Test case for word not found
+# Expected Output: 0
+
+# print(search_word("nonexistent_file.txt", "word"))  # Test case for nonexistent file
+# Expected Output: 0
